@@ -21,15 +21,14 @@
 			$this->path								= $path;
 			$this->url								= $url;
 			$this->name								= get_class($this);
-
-			add_action('admin_init', array($this, 'admin_init'));
-			add_action('init', array($this, 'init'));
 		}
 		public function admin_init(){
 			$this->get_root()->add_section($this);
 			$this->load_settings();
 		}
 		public function init(){
+			add_action('admin_init', array($this, 'admin_init'));
+			add_action('init', array($this, 'init'));
 			add_filter('excerpt_length', array($this, 'excerpt_length'));
 			add_filter('excerpt_more', array($this, 'excerpt_more'));
 
