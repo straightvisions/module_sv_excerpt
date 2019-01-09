@@ -10,12 +10,9 @@ namespace sv_100;
  * @license			See license.txt or https://straightvisions.com
  */
 class sv_excerpt extends init {
-	static $scripts_loaded						= false;
-	
 	public function __construct() {
 	
 	}
-	
 	public function init() {
 		$this->set_section_title( 'Excerpt' );
 		$this->set_section_desc( __( 'Adjust Settings', $this->get_module_name() ) );
