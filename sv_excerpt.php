@@ -17,30 +17,23 @@ class sv_excerpt extends init {
 	
 	}
 	
-	public function admin_init() {
-		$this->get_root()->add_section( $this );
-		$this->load_settings();
-	}
-
 	public function init() {
 		$this->set_section_title( 'Excerpt' );
 		$this->set_section_desc( __( 'Adjust Settings', $this->get_module_name() ) );
 		$this->set_section_type( 'settings' );
+		$this->get_root()->add_section( $this );
+		$this->load_settings();
 		
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
 		add_filter( 'excerpt_length', array( $this, 'excerpt_length' ) );
 		add_filter( 'excerpt_more', array( $this, 'excerpt_more' ) );
-
-		if ( ! is_admin() ) {
-			$this->load_settings();
-		}
 	}
 
 	public function load_settings() {
 		$this->s['length'] = static::$settings->create( $this )
 			->set_ID( 'length' )
 			->set_title( 'Excerpt Length' )
-			->set_description( __( 'Maximum of chars allowed in displaying excerpts. Default is 80.', $this->get_module_name() ) )
+			->set_description( __( 'Maximum of words allowed in displaying excerpts. Default is 80.', $this->get_module_name() ) )
 			->set_placeholder( '80' )
 			->load_type( 'number' );
 
