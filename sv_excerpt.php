@@ -10,7 +10,6 @@ namespace sv_100;
  * @license			See license.txt or https://straightvisions.com
  */
 class sv_excerpt extends init {
-	const section_title							= 'Abstract';
 	static $scripts_loaded						= false;
 	
 	public function __construct() {
