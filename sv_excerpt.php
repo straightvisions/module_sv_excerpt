@@ -4,7 +4,7 @@ namespace sv_100;
 /**
  * @author			straightvisions
  * @package			sv_100
- * @copyright		2019 Matthias Reuter
+ * @copyright		2019 straightvisions GmbH
  * @link			https://straightvisions.com
  * @since			1.0
  * @license			See license.txt or https://straightvisions.com
