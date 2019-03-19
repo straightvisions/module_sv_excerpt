@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sv_excerpt\n"
-"POT-Creation-Date: 2019-03-19 18:26+0100\n"
-"PO-Revision-Date: 2019-03-19 18:26+0100\n"
+"POT-Creation-Date: 2019-03-19 19:33+0100\n"
+"PO-Revision-Date: 2019-03-19 19:33+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -41,13 +41,15 @@ msgstr ""
 "Maximale Anzahl der Wörter, die bei der Anzeige von Auszügen erlaubt sind."
 
 #: sv_excerpt.php:51
-msgid "Excerpt read more text"
-msgstr "Lesen Sie mehr Text für Auszüge"
-
-#: sv_excerpt.php:52
-msgid "Read More Text for Excerpts."
-msgstr "Lesen Sie mehr Text für Auszüge."
+msgid "Text to show at the end of the excerpt"
+msgstr "Text der zum Ende des Ausschnitts angezeigt wird"
 
 #. Theme Name of the plugin/theme
 msgid "sv_excerpt"
 msgstr "sv_excerpt"
+
+#~ msgid "Excerpt read more text"
+#~ msgstr "Lesen Sie mehr Text für Auszüge"
+
+#~ msgid "Read More Text for Excerpts."
+#~ msgstr "Lesen Sie mehr Text für Auszüge."

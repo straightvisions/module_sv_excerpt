@@ -48,8 +48,7 @@ class sv_excerpt extends init {
 
 		$this->s['more'] = static::$settings->create( $this )
 			->set_ID( 'more' )
-			->set_title( __( 'Excerpt read more text', $this->get_module_name() ) )
-			->set_description( __( 'Read More Text for Excerpts.', $this->get_module_name() ) )
+			->set_title( __( 'Text to show at the end of the excerpt', $this->get_module_name() ) )
 			->set_placeholder( '...' )
 			->load_type( 'text' );
 	}
