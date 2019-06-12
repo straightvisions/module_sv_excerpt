@@ -18,15 +18,15 @@ class sv_excerpt extends init {
 
 	public function init() {
 		// Translates the module
-		load_theme_textdomain( $this->get_module_name(), $this->get_path( 'languages' ) );
+		load_theme_textdomain( 'sv_excerpt', $this->get_path( 'languages' ) );
 
 		// Module Info
 		$this->set_module_title( 'SV Excerpt' );
-		$this->set_module_desc( __( 'This module gives the ability to define how excerpts will be displayed.', $this->get_module_name() ) );
+		$this->set_module_desc( __( 'This module gives the ability to define how excerpts will be displayed.', 'sv_excerpt' ) );
 
 		// Section Info
 		$this->set_section_title( 'Excerpt' );
-		$this->set_section_desc( __( 'Adjust Settings', $this->get_module_name() ) );
+		$this->set_section_desc( __( 'Adjust Settings', 'sv_excerpt' ) );
 		$this->set_section_type( 'settings' );
 		$this->get_root()->add_section( $this );
 
@@ -41,14 +41,14 @@ class sv_excerpt extends init {
 	public function load_settings() {
 		$this->s['length'] = static::$settings->create( $this )
 			->set_ID( 'length' )
-			->set_title( __( 'Excerpt length', $this->get_module_name() ) )
-			->set_description( __( 'Maximum number of words allowed in displaying excerpts.', $this->get_module_name() ) )
+			->set_title( __( 'Excerpt length', 'sv_excerpt' ) )
+			->set_description( __( 'Maximum number of words allowed in displaying excerpts.', 'sv_excerpt' ) )
 			->set_placeholder( '80' )
 			->load_type( 'number' );
 
 		$this->s['more'] = static::$settings->create( $this )
 			->set_ID( 'more' )
-			->set_title( __( 'Text to show at the end of the excerpt', $this->get_module_name() ) )
+			->set_title( __( 'Text to show at the end of the excerpt', 'sv_excerpt' ) )
 			->set_placeholder( '...' )
 			->load_type( 'text' );
 	}
