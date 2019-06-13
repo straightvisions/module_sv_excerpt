@@ -12,10 +12,6 @@ namespace sv_100;
  */
 
 class sv_excerpt extends init {
-	public function __construct() {
-	
-	}
-
 	public function init() {
 		// Module Info
 		$this->set_module_title( 'SV Excerpt' );
@@ -36,14 +32,14 @@ class sv_excerpt extends init {
 	}
 
 	public function load_settings() {
-		$this->s['length'] = static::$settings->create( $this )
+		$this->s['length'] = $this->get_setting()
 			->set_ID( 'length' )
 			->set_title( __( 'Excerpt length', 'sv_100' ) )
 			->set_description( __( 'Maximum number of words allowed in displaying excerpts.', 'sv_100' ) )
 			->set_placeholder( '80' )
 			->load_type( 'number' );
 
-		$this->s['more'] = static::$settings->create( $this )
+		$this->s['more'] = $this->get_setting()
 			->set_ID( 'more' )
 			->set_title( __( 'Text to show at the end of the excerpt', 'sv_100' ) )
 			->set_placeholder( '...' )
