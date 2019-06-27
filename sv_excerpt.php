@@ -1,10 +1,10 @@
 <?php
-namespace sv_100;
+namespace sv100;
 
 /**
  * @version         1.00
  * @author			straightvisions
- * @package			sv_100
+ * @package			sv100
  * @copyright		2019 straightvisions GmbH
  * @link			https://straightvisions.com
  * @since			1.0
@@ -15,11 +15,11 @@ class sv_excerpt extends init {
 	public function init() {
 		// Module Info
 		$this->set_module_title( 'SV Excerpt' );
-		$this->set_module_desc( __( 'This module gives the ability to define how excerpts will be displayed.', 'straightvisions-100' ) );
+		$this->set_module_desc( __( 'This module gives the ability to define how excerpts will be displayed.', 'sv100' ) );
 
 		// Section Info
-		$this->set_section_title( __( 'Excerpt', 'straightvisions-100' ) );
-		$this->set_section_desc( __( 'Adjust Settings', 'straightvisions-100' ) );
+		$this->set_section_title( __( 'Excerpt', 'sv100' ) );
+		$this->set_section_desc( __( 'Adjust Settings', 'sv100' ) );
 		$this->set_section_type( 'settings' );
 		$this->get_root()->add_section( $this );
 
@@ -34,14 +34,14 @@ class sv_excerpt extends init {
 	public function load_settings() {
 		$this->s['length'] = $this->get_setting()
 			->set_ID( 'length' )
-			->set_title( __( 'Excerpt length', 'straightvisions-100' ) )
-			->set_description( __( 'Maximum number of words allowed in displaying excerpts.', 'straightvisions-100' ) )
+			->set_title( __( 'Excerpt length', 'sv100' ) )
+			->set_description( __( 'Maximum number of words allowed in displaying excerpts.', 'sv100' ) )
 			->set_placeholder( '80' )
 			->load_type( 'number' );
 
 		$this->s['more'] = $this->get_setting()
 			->set_ID( 'more' )
-			->set_title( __( 'Text to show at the end of the excerpt', 'straightvisions-100' ) )
+			->set_title( __( 'Text to show at the end of the excerpt', 'sv100' ) )
 			->set_placeholder( '...' )
 			->load_type( 'text' );
 	}
