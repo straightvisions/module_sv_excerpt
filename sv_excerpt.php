@@ -37,7 +37,8 @@
 					 ->set_ID( 'length' )
 					 ->set_title( __( 'Excerpt length', 'sv100' ) )
 					 ->set_description( __( 'Maximum number of words allowed in displaying excerpts.', 'sv100' ) )
-					 ->set_placeholder( '80' )
+					 ->set_placeholder( '30' )
+					 ->set_default_value( 30 )
 					 ->load_type( 'number' );
 	
 			$this->s['more'] =
@@ -45,6 +46,7 @@
 					 ->set_ID( 'more' )
 					 ->set_title( __( 'Text to show at the end of the excerpt', 'sv100' ) )
 					 ->set_placeholder( '...' )
+					 ->set_default_value( '...' )
 					 ->load_type( 'text' );
 		}
 	
