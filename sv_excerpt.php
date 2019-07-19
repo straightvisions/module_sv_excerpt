@@ -14,10 +14,10 @@
 	class sv_excerpt extends init {
 		public function init() {
 			$this->set_module_title( 'SV Excerpt' )
-				 ->set_module_desc( __( 'This module gives the ability to define how excerpts will be displayed.', 'sv100' ) )
+				 ->set_module_desc( __( 'Manages excerpts.', 'sv100' ) )
 				 ->load_settings()
-				 ->set_section_title( __( 'Excerpt', 'sv100' ) )
-				 ->set_section_desc( __( 'Adjust Settings', 'sv100' ) )
+				 ->set_section_title( __( 'Excerpts', 'sv100' ) )
+				 ->set_section_desc( __( 'Excerpt settings', 'sv100' ) )
 				 ->set_section_type( 'settings' )
 				 ->get_root()
 				 ->add_section( $this );
@@ -30,7 +30,7 @@
 		protected function load_settings(): sv_excerpt {
 			$this->get_setting( 'length' )
 				 ->set_title( __( 'Excerpt length', 'sv100' ) )
-				 ->set_description( __( 'Maximum number of words allowed in displaying excerpts.', 'sv100' ) )
+				 ->set_description( __( 'Maximum number of words allowed in displayed excerpts.', 'sv100' ) )
 				 ->set_placeholder( '30' )
 				 ->set_default_value( 30 )
 				 ->load_type( 'number' );
