@@ -13,7 +13,7 @@
 	
 	class sv_excerpt extends init {
 		public function init() {
-			$this->set_module_title( 'SV Excerpt' )
+			$this->set_module_title( __( 'SV Excerpt', 'sv100' ) )
 				 ->set_module_desc( __( 'Manages excerpts.', 'sv100' ) )
 				 ->load_settings()
 				 ->set_section_title( __( 'Excerpts', 'sv100' ) )
@@ -31,24 +31,28 @@
 			$this->get_setting( 'length' )
 				 ->set_title( __( 'Excerpt length', 'sv100' ) )
 				 ->set_description( __( 'Maximum number of words allowed in displayed excerpts.', 'sv100' ) )
-				 ->set_placeholder( '30' )
+				 ->set_placeholder( __( '30', 'sv100' ) )
 				 ->set_default_value( 30 )
 				 ->load_type( 'number' );
 			
 			$this->get_setting( 'more' )
 				 ->set_title( __( 'Text to show at the end of the excerpt', 'sv100' ) )
-				 ->set_placeholder( '...' )
-				 ->set_default_value( '...' )
+				 ->set_placeholder( __( '...', 'sv100' ) )
+				 ->set_default_value( __( '...', 'sv100' ) )
 				 ->load_type( 'text' );
 			
 			return $this;
 		}
 	
 		public function excerpt_length( int $length ): int {
-			return $this->get_setting( 'length' )->run_type()->get_data() ? $this->get_setting( 'length' )->run_type()->get_data() : 30;
+			return $this->get_setting( 'length' )->run_type()->get_data()
+				? $this->get_setting( 'length' )->run_type()->get_data()
+				: 30;
 		}
 	
 		public function excerpt_more(): string {
-			return $this->get_setting( 'more' )->run_type()->get_data() ? $this->get_setting( 'more' )->run_type()->get_data() : '...';
+			return $this->get_setting( 'more' )->run_type()->get_data()
+				? $this->get_setting( 'more' )->run_type()->get_data()
+				: __( '...', 'sv100' );
 		}
 	}
