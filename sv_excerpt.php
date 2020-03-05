@@ -2,7 +2,7 @@
 	namespace sv100;
 	
 	/**
-	 * @version         4.000
+	 * @version         4.004
 	 * @author			straightvisions GmbH
 	 * @package			sv100
 	 * @copyright		2019 straightvisions GmbH
@@ -45,14 +45,14 @@
 		}
 	
 		public function excerpt_length( int $length ): int {
-			return $this->get_setting( 'length' )->run_type()->get_data()
-				? $this->get_setting( 'length' )->run_type()->get_data()
+			return $this->get_setting( 'length' )->get_data()
+				? $this->get_setting( 'length' )->get_data()
 				: 30;
 		}
 	
 		public function excerpt_more(): string {
-			return $this->get_setting( 'more' )->run_type()->get_data()
-				? $this->get_setting( 'more' )->run_type()->get_data()
+			return $this->get_setting( 'more' )->get_data()
+				? $this->get_setting( 'more' )->get_data()
 				: __( '...', 'sv100' );
 		}
 	}
