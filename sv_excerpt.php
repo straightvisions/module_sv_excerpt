@@ -14,13 +14,14 @@
 	class sv_excerpt extends init {
 		public function init() {
 			$this->set_module_title( __( 'SV Excerpt', 'sv100' ) )
-				 ->set_module_desc( __( 'Manages excerpts.', 'sv100' ) )
-				 ->load_settings()
-				 ->set_section_title( __( 'Excerpts', 'sv100' ) )
-				 ->set_section_desc( __( 'Excerpt settings', 'sv100' ) )
-				 ->set_section_type( 'settings' )
-				 ->get_root()
-				 ->add_section( $this );
+				->set_module_desc( __( 'Manages excerpts.', 'sv100' ) )
+				->load_settings()
+				->set_section_title( __( 'Excerpts', 'sv100' ) )
+				->set_section_desc( __( 'Excerpt settings', 'sv100' ) )
+				->set_section_type( 'settings' )
+				->set_section_order(32)
+				->get_root()
+				->add_section( $this );
 	
 			// Action Hooks
 			add_filter( 'excerpt_length', array( $this, 'excerpt_length' ) );
