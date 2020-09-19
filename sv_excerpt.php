@@ -1,25 +1,14 @@
 <?php
 	namespace sv100;
-	
-	/**
-	 * @version         4.004
-	 * @author			straightvisions GmbH
-	 * @package			sv100
-	 * @copyright		2019 straightvisions GmbH
-	 * @link			https://straightvisions.com
-	 * @since			1.000
-	 * @license			See license.txt or https://straightvisions.com
-	 */
-	
+
 	class sv_excerpt extends init {
 		public function init() {
 			$this->set_module_title( __( 'SV Excerpt', 'sv100' ) )
 				->set_module_desc( __( 'Manages excerpts.', 'sv100' ) )
-				->load_settings()
-				->set_section_title( __( 'Excerpts', 'sv100' ) )
-				->set_section_desc( __( 'Excerpt settings', 'sv100' ) )
+				->set_section_title( $this->get_module_title() )
+				->set_section_desc( $this->get_module_desc() )
 				->set_section_type( 'settings' )
-				->set_section_order(32)
+				->set_section_order(5000)
 				->get_root()
 				->add_section( $this );
 	
