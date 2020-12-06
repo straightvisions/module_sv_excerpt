@@ -7,8 +7,8 @@
 				->set_module_desc( __( 'Manages excerpts.', 'sv100' ) )
 				->set_section_title( $this->get_module_title() )
 				->set_section_desc( $this->get_module_desc() )
-				->set_section_type( 'settings' )
 				->set_section_order(3500)
+				->set_section_icon('<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 21h-24v-2h24v2zm0-4.024h-24v-2h24v2zm0-3.976h-24v-2h24v2zm0-4h-24v-2h24v2zm0-6v2h-24v-2h24z"/></svg>')
 				->get_root()
 				->add_section( $this );
 	
