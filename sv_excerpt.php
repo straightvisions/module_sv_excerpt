@@ -1,25 +1,14 @@
 <?php
 	namespace sv100;
-	
-	/**
-	 * @version         4.004
-	 * @author			straightvisions GmbH
-	 * @package			sv100
-	 * @copyright		2019 straightvisions GmbH
-	 * @link			https://straightvisions.com
-	 * @since			1.000
-	 * @license			See license.txt or https://straightvisions.com
-	 */
-	
+
 	class sv_excerpt extends init {
 		public function init() {
 			$this->set_module_title( __( 'SV Excerpt', 'sv100' ) )
 				->set_module_desc( __( 'Manages excerpts.', 'sv100' ) )
-				->load_settings()
-				->set_section_title( __( 'Excerpts', 'sv100' ) )
-				->set_section_desc( __( 'Excerpt settings', 'sv100' ) )
-				->set_section_type( 'settings' )
-				->set_section_order(32)
+				->set_section_title( $this->get_module_title() )
+				->set_section_desc( $this->get_module_desc() )
+				->set_section_order(3500)
+				->set_section_icon('<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 21h-24v-2h24v2zm0-4.024h-24v-2h24v2zm0-3.976h-24v-2h24v2zm0-4h-24v-2h24v2zm0-6v2h-24v-2h24z"/></svg>')
 				->get_root()
 				->add_section( $this );
 	
